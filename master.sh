@@ -16,6 +16,7 @@ nix-env -iA nixpkgs.fzf
 nix-env -iA nixpkgs.fd
 nix-env -iA nixpkgs.ripgrep
 # clone vim and tmux setup
+rm -rf ds_nix_config/
 git clone https://github.com/Yousuf28/ds_nix.git ~/ds_nix_config
 if [ -f .vimrc ]; then
    mv .vimrc .vimrc.bak
