@@ -1,0 +1,12 @@
+k <- list.dirs(path='/nix/store', recursive=F)
+# lang <- grep('languageserver', k, value=T)
+# lang_s <- paste0(lang, '/library')
+
+# xml <- grep('r-xml2', lang, value =T)
+# xml_s <- paste0(xml, '/library')
+
+
+lib_path <- paste0(grep('-r-', k, value=T), '/library')
+my_path <- .libPaths()
+my_path <- c(lib_path, my_path)
+.libPaths(my_path)
