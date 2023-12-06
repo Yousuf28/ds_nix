@@ -25,3 +25,4 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # font 
 nix-env -iA nixpkgs.fira-code
 nix-env -iA nixpkgs.meslo-lg
+touch ~/.Rprofile
