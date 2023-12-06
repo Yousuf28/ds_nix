@@ -25,8 +25,13 @@ fi
 if [ -f .tmux.conf ]; then
    mv .tmux.conf .tmux.conf.bak
 fi
+
+if [ -f .Rprofile ]; then
+   mv .Rprofile .Rprofile.bak
+fi
 cp ~/ds_nix_config/vimrc ~/.vimrc
 cp ~/ds_nix_config/tmux.conf ~/.tmux.conf
+cp ~/ds_nix_config/rprofile ~/.Rprofile
 # vim plugins manager (:PlugInstall) to install
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # tmux plugin manager (prefix + I) to install 
@@ -34,4 +39,3 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # font 
 nix-env -iA nixpkgs.fira-code
 nix-env -iA nixpkgs.meslo-lg
-touch ~/.Rprofile
