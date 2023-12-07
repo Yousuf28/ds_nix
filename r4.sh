@@ -17,3 +17,6 @@ cd R-${R_VERSION_MAJOR}.${R_VERSION_MINOR}.${R_VERSION_PATCH}
 ./configure --with-x=no && \
 	make && \
 	make install
+
+Rscript -e "install.packages('xml2')"
+Rscript -e "install.packages('languageserver')"
