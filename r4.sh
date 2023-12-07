@@ -18,5 +18,5 @@ cd R-${R_VERSION_MAJOR}.${R_VERSION_MINOR}.${R_VERSION_PATCH}
 	make && \
 	make install
 
-Rscript -e "install.packages('xml2')"
-Rscript -e "install.packages('languageserver')"
+Rscript -e "install.packages('xml2', repos = c('https://r-lib.r-universe.dev', 'https://cloud.r-project.org'))"
+Rscript -e "install.packages('languageserver', repos = c('https://reditorsupport.r-universe.dev', 'https://cloud.r-project.org'))"

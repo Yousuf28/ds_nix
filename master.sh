@@ -39,3 +39,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # font 
 # nix-env -iA nixpkgs.fira-code
 # nix-env -iA nixpkgs.meslo-lg
+vim +PlugInstall +qa
+vim +CocInstall coc-pyright +qa
+vim +CocInstall coc-r-lsp +qa
